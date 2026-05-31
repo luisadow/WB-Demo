@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const base = import.meta.env.BASE_URL;
+
 const services = [
   {
     title: "Maler- und Lackierarbeiten",
@@ -45,7 +47,11 @@ const process = [
 <BaseLayout>
   <header class="section-pad flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
     <div class="flex items-center gap-4">
-      <img src="/assets/logo.png" alt="Logo Robert Jan Wozniak" class="h-16 w-auto sm:h-20" />
+      <img
+        src={`${base}assets/logo.png`}
+        alt="Logo Robert Jan Wozniak"
+        class="h-16 w-auto sm:h-20"
+      />
       <div>
         <p class="text-sm uppercase tracking-[0.28em] text-moss">Dienstleistungen am Bau</p>
         <p class="text-xl font-semibold sm:text-2xl">Robert Jan Wozniak</p>

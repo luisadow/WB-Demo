@@ -5,6 +5,8 @@ const {
   title = "Robert Jan Wozniak Dienstleistungen am Bau",
   description = "Zuverlässige Dienstleistungen am Bau in Berlin. Sauber, termintreu und farbtreu umgesetzt."
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -14,7 +16,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="icon" type="image/png" href={`${base}assets/logo.png`} />
   </head>
   <body class="relative min-h-screen font-body text-ink antialiased">
     <div id="color-splash" class="splash"></div>
