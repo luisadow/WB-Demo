@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Robert Jan Wozniak Dienstleistungen am Bau",
+  description = "Zuverlässige Dienstleistungen am Bau in Berlin. Sauber, termintreu und farbtreu umgesetzt."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+  </head>
+  <body class="relative min-h-screen font-body text-ink antialiased">
+    <div id="color-splash" class="splash"></div>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+
+    <div class="relative z-10">
+      <slot />
+    </div>
+
+    <script type="module">
+      import "../scripts/animations";
+    </script>
+  </body>
+</html>
